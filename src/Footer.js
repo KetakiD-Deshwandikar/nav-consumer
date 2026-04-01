@@ -19,7 +19,7 @@ const Footer = () => {
           const redirect = searchParams.get("redirect") || "off";
           const theme = searchParams.get("theme") || "light";
           const searchEnabled = searchParams.get("searchEnabled") || "off";
-          const whatsNew = searchParams.get("whatsNew") || false;
+          const whatsNew = searchParams.get("whatsNew") || "off";
           const isMiniGnav = searchParams.get("mini-gnav") || false;
           const desktopAppsCta = searchParams.get("desktopAppsCta") || false;
           const showUnavSectionDivider = searchParams.get("showUnavSectionDivider") || "false";
@@ -81,7 +81,7 @@ const Footer = () => {
               useNewMobileNav: newNav,
               noBorder: noBorder.toLowerCase() === "true",
               selfIntegrateUnav: selfIntegrateUnav === 'true',
-              whatsNew: whatsNew === 'true',
+              whatsNew,
               unav: {
                 unavComponents,
                 unavHelpChildren: [
